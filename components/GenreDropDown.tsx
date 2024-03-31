@@ -29,7 +29,7 @@ async function Genre() {
     const data = (await response.json()) as Genres;
 
     return (
-            <DropdownMenu>
+            <DropdownMenu >
 
                 <DropdownMenuTrigger className="flex items-center justify-center">
                     Genre<ChevronDown className="ml-1" />
