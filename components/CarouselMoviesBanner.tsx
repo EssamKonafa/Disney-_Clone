@@ -13,7 +13,7 @@ async function CarouselMoviesBanner() {
     // const movies = await getDiscoverMovies(id,keywords)
 
     return (
-        <div className='mt-28  mb-5 border'>
+        <div className=''>
             <CarouselMovieWrapper movies={movies}/>
         </div>
     )
