@@ -1,4 +1,5 @@
 import { getPopularMovies, getTopRatedMovies, getUpcomingMovies } from "@/api/GetMovies";
+import CarouselMoviesBanner from "@/components/CarouselMoviesBanner";
 import MoviesCarousel from "@/components/MoviesCarousel";
 
 export default async function Home() {
@@ -9,15 +10,18 @@ export default async function Home() {
 
   return (
 
-    <div>
+    <>
 
       <div>
-        <MoviesCarousel movies={upcomingMovies} title='upcoming' isVertical/>
-        <MoviesCarousel movies={topRatedMovies} title='top Rated'/>
-        <MoviesCarousel movies={popularMovies} title='popular movies'/>
+
+        <CarouselMoviesBanner/>
+
+        <MoviesCarousel movies={upcomingMovies} title='Upcoming' isVertical/>
+        <MoviesCarousel movies={topRatedMovies} title='Top Rated'/>
+        <MoviesCarousel movies={popularMovies} title='Popular Movies'/>
       </div>
 
-    </div>
+    </>
     
   );
 }

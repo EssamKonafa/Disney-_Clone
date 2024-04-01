@@ -16,10 +16,10 @@ function MovieCard({ movie }: { movie: Movie }) {
 
       <Image
         // src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-        src={getPosterImg(movie.backdrop_path || movie.poster_path)}
+        src={getPosterImg(movie.backdrop_path,false)}
         width={1920}
         height={1080}
-        alt='poster'
+        alt={movie.title}
         className=' w-fit lg:min-w-[400px] h-56 object-cover object-center shadow-md shadow-gray-900 drop-shadow-xl rounded-sm'
       />
 

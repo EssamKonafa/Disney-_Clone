@@ -21,7 +21,7 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
                     movies.map((movie) => (
                         <div
                             key={movie.id}
-                            className={cn(isVertical && 'flex flex-col lg:flex-row space-x-5')}
+                            className={cn(isVertical && 'flex flex-col space-y-5 items-center mb-5 lg:flex-row space-x-5')}
                         >
                             <MovieCard movie={movie} />
                             <div className="max-w-2xl">
@@ -29,7 +29,7 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
                                     {movie.title} ({movie.release_date?.split("-")[0]})
                                 </p>
                                 <hr className="mb-3" />
-                                <p className="">{movie.overview}</p>
+                                <p>{movie.overview}</p>
                             </div>
                         </div>
                     ))
